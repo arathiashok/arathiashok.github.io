@@ -11,7 +11,20 @@
     <link rel="icon" type="image/x-icon" href="/images/Portfolio_icon.jpeg"> 
     <title>Meet Arathi!</title>
   </head>
-  <body>
+
+  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+      <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+    </div>
+  </nav>
+
+  <div id ="portfolio">
     <header style ="padding:128px 16px">
       <h1>Arathi Ashok</h1>
       <p>Software Engineer/Data Engineer</p>
@@ -24,7 +37,7 @@
       
     </div>
 
-    <div style ="padding:128px 16px">
+    <div id = "contact" style ="padding:128px 16px">
       <h2>Contact me</h2>
       <div>
         <p><i class="fas fa-map-marker-alt w3-hover-opacity">Iowa City, IA</i></p>
@@ -33,7 +46,7 @@
       </div>
     </div>
 
-    <div style ="padding:128px 16px">
+    <div id ="skills" style ="padding:128px 16px">
       <h2>Technical Skills</h2>
       <ul>
         <li>Programming Skills: Python, Java, C#, Powershell, SQL</li>
@@ -45,8 +58,8 @@
       </ul>
     </div>
 
-    <div style ="padding:128px 16px">
-      <h2>My Work Experience</h2>
+    <div id= "experience" style ="padding:128px 16px">
+      <h2>My Work Experience</h2><a href="/projects.html">More Details</a>
       <ol>
         <li>Graduate Teaching Asisstant</li>
         <ul>
@@ -75,5 +88,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  </div>
 </html>
