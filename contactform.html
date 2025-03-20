@@ -53,6 +53,18 @@
                         <div class="text-center">
                             <button type="submit">SEND MESSAGE</button>
                         </div>
+                        <?php session_start(); ?>
+                        <?php if (isset($_SESSION["error"])): ?>
+                            <div class="alert alert-danger text-center mt-3">
+                                <?php echo $_SESSION["error"]; unset($_SESSION["error"]); ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if (isset($_SESSION["success"])): ?>
+                            <div class="alert alert-success text-center mt-3">
+                                <?php echo $_SESSION["success"]; unset($_SESSION["success"]); ?>
+                            </div>
+                        <?php endif; ?>
+
                     </form>
                 </div>
             </div>
@@ -65,3 +77,4 @@
 
 </body>
 </html>
+
