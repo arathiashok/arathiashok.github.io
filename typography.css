@@ -64,7 +64,7 @@ nav a:hover {
     font-weight: bold;
     padding: 10px 20px;
     border: none;
-    background-color: #11113f;
+    background-color: #1c1c57;
     color: #fff;
     cursor: pointer;
     border-radius: 20px;
@@ -75,7 +75,7 @@ nav a:hover {
 }
 
 .internalbuttons:hover {
-    background-color: #211b5f;
+    background-color: #29217b;
     color: #fff;
     transition: 0.3s;
 }
@@ -135,13 +135,13 @@ input[type="text"]:focus, textarea:focus, input:focus {
 .project-header-img {
     width: 120px;
     margin-bottom: 10px;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.07));
+    filter: drop-shadow(0 4px 8px #00000012);
 }
 
 /* Table header */
 .table thead th,
 .thead-dark th {
-    background: #2a2a39 !important;
+    background: #323245 !important;
     color: #fff !important;
     font-size: 1.1rem;
     width: auto;
