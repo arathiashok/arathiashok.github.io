@@ -223,6 +223,47 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Add or update these styles for consistent card sizing */
+#projects .card {
+    height: 100%;
+    min-height: 420px;      /* Adjust as needed for your content */
+    max-width: 350px;       /* Ensures all cards have the same width */
+    margin: 0 auto 24px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#projects .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#projects .card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#projects .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#projects .card-text {
+    font-size: 1rem;
+    color: #333;
+}
+
 @media (max-width: 991.98px) {
     .table-responsive {
         overflow-x: auto;
