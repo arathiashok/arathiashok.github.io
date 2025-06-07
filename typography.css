@@ -264,22 +264,17 @@ footer a:hover {
     color: #333;
 }
 
+.table {
+    width: 100%;
+    min-width: unset; /* Remove or comment out min-width */
+}
 @media (max-width: 991.98px) {
-    /* .table-responsive {
-        overflow-x: auto;
-    } */
     .table {
-        width: 100%;
         min-width: unset;
     }
 }
 @media (max-width: 575.98px) {
     .table {
-        font-size: 13px;
         min-width: unset;
-        /* min-width: 500px; */
-    }
-    .project-header-img {
-        width: 80px;
     }
 }
