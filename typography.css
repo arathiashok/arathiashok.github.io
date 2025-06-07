@@ -64,7 +64,7 @@ nav a:hover {
     font-weight: bold;
     padding: 10px 20px;
     border: none;
-    background-color: #6366f1;
+    background-color: #242553;
     color: #fff;
     cursor: pointer;
     border-radius: 20px;
@@ -75,7 +75,7 @@ nav a:hover {
 }
 
 .internalbuttons:hover {
-    background-color: #4338ca;
+    background-color: #312c71;
     color: #fff;
     transition: 0.3s;
 }
@@ -141,7 +141,7 @@ input[type="text"]:focus, textarea:focus, input:focus {
 /* Table header */
 .table thead th,
 .thead-dark th {
-    background: #6366f1 !important;
+    background: #252533 !important;
     color: #fff !important;
     font-size: 1.1rem;
     width: auto;
