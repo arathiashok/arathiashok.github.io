@@ -211,3 +211,21 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 991.98px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+    .table {
+        min-width: 700px;
+    }
+}
+@media (max-width: 575.98px) {
+    .table {
+        font-size: 13px;
+        min-width: 500px;
+    }
+    .project-header-img {
+        width: 80px;
+    }
+}
