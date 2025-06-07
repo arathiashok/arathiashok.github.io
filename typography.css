@@ -1,4 +1,7 @@
 body {
+    /* Gradient background for body */
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+    min-height: 100vh;
     font-family: 'Arial', sans-serif; 
     font-size: 16px;
     line-height: 1.6;
@@ -54,21 +57,26 @@ nav a:hover {
     transition: 0.3s;
 }
 
+/* Internal buttons (merged with your existing .internalbuttons, no repeat) */
 .internalbuttons {
     font-family: 'Tahoma', sans-serif;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
     border: none;
-    background-color: #1E3A8A;
-    color: white;
+    background-color: #6366f1;
+    color: #fff;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s, color 0.2s;
 }
 
 .internalbuttons:hover {
-    background-color: #F59E0B;
-    color: #1E3A8A;
+    background-color: #4338ca;
+    color: #fff;
     transition: 0.3s;
 }
 
@@ -121,6 +129,67 @@ input[type="text"]:focus, textarea:focus, input:focus {
 .project-img{
     height: 150px;
     object-fit: cover;
+}
+
+/* Project header image */
+.project-header-img {
+    width: 120px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.07));
+}
+
+/* Table header */
+.table thead th,
+.thead-dark th {
+    background: #6366f1 !important;
+    color: #fff !important;
+    font-size: 1.1rem;
+    width: auto;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 16px;
+}
+
+/* Table cells */
+.table td, .table th {
+    vertical-align: middle !important;
+}
+
+/* Project icon */
+.project-icon {
+    font-size: 2rem;
+    color: #6366f1;
+    margin-bottom: 8px;
+}
+
+/* Project row styling */
+.project-row {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+    border-radius: 12px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.project-row:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 16px rgba(99,102,241,0.13);
+}
+
+/* Section divider */
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background: #6366f1;
+    margin: 0 auto 24px auto;
+    border-radius: 2px;
+}
+
+/* Make Link column wider */
+th[scope="col"]:last-child,
+td:last-child {
+    min-width: 120px;
+    width: 140px;
 }
 
 footer {
