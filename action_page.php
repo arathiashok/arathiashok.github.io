@@ -1,43 +1,32 @@
 <?php
-// Enable error reporting for debugging (remove in production)
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = filter_var(trim($_POST["Name"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $email = filter_var(trim($_POST["Email"]), FILTER_SANITIZE_EMAIL);
-    $subject = filter_var(trim($_POST["Subject"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $message = filter_var(trim($_POST["Message"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    // Sanitize and validate inputs
+    $name = htmlspecialchars(trim($_POST["name"] ?? ''));
+    $email = filter_var(trim($_POST["email"] ?? ''), FILTER_VALIDATE_EMAIL);
+    $subject = htmlspecialchars(trim($_POST["subject"] ?? ''));
+    $message = htmlspecialchars(trim($_POST["message"] ?? ''));
 
-    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
-        echo "All fields are required.";
+    if (!$name || !$email || !$subject || !$message) {
+        echo "Please fill in all fields correctly.";
         exit;
     }
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format.";
-        exit;
-    }
-
+    // Email settings
     $to = "arathi.ashokpillai@gmail.com";
-    $email_subject = "Contact Form: " . $subject;
-    $email_body = "You have received a new message from your website contact form.\n\n" .
-                  "Name: $name\n" .
-                  "Email: $email\n" .
-                  "Subject: $subject\n\n" .
-                  "Message:\n$message\n";
-
-    // Use a valid From address from your domain if possible
-    $headers = "From: noreply@yourdomain.com\r\n";
+    $headers = "From: $name <$email>\r\n";
     $headers .= "Reply-To: $email\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        echo "Message sent successfully!";
+    $email_body = "You have received a new message from your website contact form:\n\n";
+    $email_body .= "Name: $name\n";
+    $email_body .= "Email: $email\n";
+    $email_body .= "Subject: $subject\n";
+    $email_body .= "Message:\n$message\n";
+
+    if (mail($to, $subject, $email_body, $headers)) {
+        echo "Thank you! Your message has been sent.";
     } else {
-        echo "Error sending message. Please try again later.";
+        echo "Error: Message could not be sent.";
     }
 } else {
     echo "Invalid request.";
