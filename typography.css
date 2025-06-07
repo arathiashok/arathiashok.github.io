@@ -226,7 +226,7 @@ footer a:hover {
 /* Add or update these styles for consistent card sizing */
 #projects .card {
     height: 100%;
-    min-height: 420px;      /* Adjust as needed for your content */
+    min-height: 400px;      /* Adjust as needed for your content */
     max-width: 350px;       /* Ensures all cards have the same width */
     margin: 0 auto 24px auto;
     display: flex;
